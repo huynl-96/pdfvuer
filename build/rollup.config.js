@@ -1,15 +1,15 @@
 // rollup.config.js
-import fs from 'fs';
-import path from 'path';
-import vue from 'rollup-plugin-vue';
 import alias from '@rollup/plugin-alias';
 import commonjs from '@rollup/plugin-commonjs';
-import replace from '@rollup/plugin-replace';
-import babel from 'rollup-plugin-babel';
-import { terser } from 'rollup-plugin-terser';
-import minimist from 'minimist';
 import resolve from '@rollup/plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
+import fs from 'fs';
+import minimist from 'minimist';
+import path from 'path';
+import babel from 'rollup-plugin-babel';
 import nodePolyfills from 'rollup-plugin-node-polyfills';
+import { terser } from 'rollup-plugin-terser';
+import vue from 'rollup-plugin-vue';
 // Get browserslist config and remove ie from es build targets
 const esbrowserslist = fs.readFileSync('./.browserslistrc')
   .toString()
